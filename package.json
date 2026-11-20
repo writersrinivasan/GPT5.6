@@ -1,0 +1,37 @@
+{
+  "name": "hexaware-gpt56-training",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.0.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "@langchain/langgraph": "^0.2.3",
+    "@langchain/core": "^0.3.14",
+    "@langchain/groq": "^0.1.1",
+    "langchain": "^0.3.5",
+    "framer-motion": "^11.11.9",
+    "lucide-react": "^0.456.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-markdown": "^9.0.1",
+    "react-hot-toast": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "typescript": "^5.0.0",
+    "tailwindcss": "^3.4.14",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3"
+  }
+}

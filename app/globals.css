@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-dark: #0a0a1a;
+  --bg-card: #12122a;
+  --bg-card2: #1a1a3a;
+}
+
+body {
+  background: var(--bg-dark);
+  color: #fff;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #12122a; }
+::-webkit-scrollbar-thumb { background: #7C3AED; border-radius: 3px; }
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #7C3AED, #EC4899, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-text-orange {
+  background: linear-gradient(135deg, #F97316, #F59E0B, #10B981);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effects */
+.glow-purple { box-shadow: 0 0 30px rgba(124, 58, 237, 0.4); }
+.glow-pink   { box-shadow: 0 0 30px rgba(236, 72, 153, 0.4); }
+.glow-cyan   { box-shadow: 0 0 30px rgba(6, 182, 212, 0.4); }
+.glow-orange { box-shadow: 0 0 30px rgba(249, 115, 22, 0.4); }
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+              linear-gradient(135deg, #7C3AED, #EC4899, #06B6D4, #F97316) border-box;
+  border: 2px solid transparent;
+  border-radius: 16px;
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Node styles for LangGraph viz */
+.langgraph-node {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.langgraph-node:hover {
+  transform: scale(1.05);
+}
+
+/* Code editor */
+.code-editor {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* Pulse ring */
+.pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid currentColor;
+  opacity: 0.4;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Tab active indicator */
+.tab-active {
+  position: relative;
+}
+.tab-active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #7C3AED, #EC4899);
+  border-radius: 2px;
+}
+
+/* Timeline */
+.timeline-line {
+  background: linear-gradient(to bottom, #7C3AED, #EC4899, #06B6D4);
+}
